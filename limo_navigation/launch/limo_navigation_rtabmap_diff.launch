@@ -1,0 +1,10 @@
+<?xml version="1"?>
+<launch>
+    <include file="$(find limo_navigation)/launch/limo_rtabmap.launch">
+        <arg name="rviz" value="false" />
+        <arg name="localization" value="true" />
+    </include>
+    <include file="$(find limo_navigation)/launch/limo_move_base_diff.launch">
+        <arg name="map_topic" value="rtabmap/grid_map" />
+    </include>
+</launch>

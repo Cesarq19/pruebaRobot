@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>limo_navigation</name>
+  <version>0.0.0</version>
+  <description>The limo_navigation package</description>
+
+  <maintainer email="support@agilex.ai">agiley</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>gmapping</exec_depend>
+  <exec_depend>map_server</exec_depend>
+  <exec_depend>move_base</exec_depend>
+  <exec_depend>nodelet</exec_depend>
+  <exec_depend>rtabmap_ros</exec_depend>
+  <exec_depend>amcl</exec_depend>
+
+
+  <test_depend>roslaunch</test_depend>
+</package>
