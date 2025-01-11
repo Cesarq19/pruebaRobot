@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>patrol_activity</name>
+  <version>0.1.0</version>
+  <description>Paquete para la patrulla automática y seguimiento de personas con ROS</description>
+
+  <!-- Información del mantenedor -->
+  <maintainer email="tucorreo@example.com">Tu Nombre</maintainer>
+  
+  <!-- Licencia -->
+  <license>BSD</license>
+
+  <!-- Dependencias de compilación -->
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <!-- Dependencias de tiempo de construcción -->
+  <build_depend>rospy</build_depend>
+  <build_depend>actionlib</build_depend>
+  <build_depend>move_base_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>image_transport</build_depend>
+  
+  <!-- Dependencias de ejecución -->
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>actionlib</exec_depend>
+  <exec_depend>move_base_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>image_transport</exec_depend>
+
+  <!-- Dependencias opcionales (como OpenCV para detección de personas) -->
+  <build_depend>opencv</build_depend>
+  <exec_depend>opencv</exec_depend>
+
+  <!-- Dependencias exportadas -->
+  <export>
+    <!-- Si necesitas incluir otros paquetes en la exportación, agrégalos aquí -->
+  </export>
+</package>

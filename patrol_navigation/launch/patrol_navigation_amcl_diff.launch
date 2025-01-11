@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="map_file" default="$(find patrol_navigation)/maps/apartment.yaml"/>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+    
+    <node pkg="amcl" type="amcl" name="amcl" output="screen">
+        <rosparam file="$(find patrol_navigation)/params/amcl_params.yaml" command="load" />
+    </node>
+
+    <include file="$(find patrol_navigation)/launch/patrol_move_base_diff.launch" />
+</launch>

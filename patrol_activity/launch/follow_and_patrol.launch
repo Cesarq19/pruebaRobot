@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Incluye la configuración de navegación -->
+  <include file="$(find patrol_navigation)/launch/patrol_navigation_amcl_diff.launch" />
+
+  <!-- Nodo de patrullaje -->
+  <node name="patrol_node" pkg="patrol_activity" type="patrol_node.py" output="screen" />
+
+  <!-- Nodo de seguimiento de personas -->
+  <node name="person_follow_node" pkg="patrol_activity" type="person_follow_node.py" output="screen" />
+</launch>

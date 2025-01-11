@@ -1,0 +1,14 @@
+<launch>
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
+    <rosparam command="load" file="$(find patrol_control)/config/localization.yaml" />
+  </node>
+
+  <node pkg="twist_mux" type="twist_mux" name="twist_mux">
+    <rosparam command="load" file="$(find patrol_control)/config/twist_mux.yaml" />
+    <remap from="cmd_vel_out" to="/patrol/cmd_vel"/>
+  </node>
+
+  <node pkg="interactive_marker_twist_server" type="marker_server" name="twist_marker_server">
+    <param name="link_name" value="base_link" />
+  </node>
+</launch>

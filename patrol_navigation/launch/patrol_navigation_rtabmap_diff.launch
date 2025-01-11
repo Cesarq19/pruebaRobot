@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find patrol_navigation)/launch/patrol_rtabmap.launch">
+        <arg name="rviz" value="false" />
+        <arg name="localization" value="true" />
+    </include>
+    <include file="$(find patrol_navigation)/launch/patrol_move_base_diff.launch">
+        <arg name="map_topic" value="rtabmap/grid_map" />
+    </include>
+</launch>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Incluye la navegación -->
+  <include file="$(find patrol_navigation)/launch/patrol_navigation_amcl_diff.launch" />
+  
+  <!-- Nodo de patrullaje -->
+  <node name="patrol_node" pkg="patrol_activity" type="patrol_node.py" output="screen" />
+</launch>
