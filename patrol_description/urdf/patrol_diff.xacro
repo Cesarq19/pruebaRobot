@@ -29,7 +29,7 @@
         <visual>
             <origin xyz="0 0 -0.15" rpy="0 0 1.57" />
             <geometry>
-                <mesh filename="package://patrol_description/meshes/patrol_base.stl"/>
+                <mesh filename="package://patrol_description/meshes/patrol_base.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </visual>
         <collision>

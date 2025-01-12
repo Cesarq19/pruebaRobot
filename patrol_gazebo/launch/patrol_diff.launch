@@ -24,7 +24,7 @@
           respawn="false" output="screen" args="patrol_state_controller"/>
 
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-    <node name="dummy_zero_cmd_vel" pkg="patrol_gazebo" type="dummy_cmd_vel" />
+    <node name="dummy_zero_cmd_vel" pkg="patrol_gazebo" type="dummy_cmd" />
 
     <include file="$(find patrol_control)/launch/control.launch"/>
 </launch>

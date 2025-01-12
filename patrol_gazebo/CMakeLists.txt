@@ -14,12 +14,17 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_msgs
 )
 
-add_executable(dummy_cmd_vel src/dummy_cmd_vel.cpp)
-target_link_libraries(dummy_cmd_vel ${catkin_LIBRARIES})
+catkin_package()
 
-install(TARGETS dummy_cmd_vel
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+)
+
+add_executable(dummy_cmd src/dummy_cmd_vel.cpp)
+add_dependencies(dummy_cmd ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(dummy_cmd ${catkin_LIBRARIES})
+
+install(TARGETS dummy_cmd
   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
 )
 
