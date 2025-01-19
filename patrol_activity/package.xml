@@ -30,13 +30,8 @@
   <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>cv_bridge</exec_depend>
   <exec_depend>image_transport</exec_depend>
+  <exec_depend>python-opencv</exec_depend>
+  <exec_depend>python-numpy</exec_depend>
+  <exec_depend>python-enum34</exec_depend>
 
-  <!-- Dependencias opcionales (como OpenCV para detección de personas) -->
-  <build_depend>opencv</build_depend>
-  <exec_depend>opencv</exec_depend>
-
-  <!-- Dependencias exportadas -->
-  <export>
-    <!-- Si necesitas incluir otros paquetes en la exportación, agrégalos aquí -->
-  </export>
 </package>

@@ -1,25 +1,21 @@
-cmake_minimum_required(VERSION 3.0.2)
-project(patrol_navigation)
+<?xml version="1.0"?>
+<package format="2">
+  <name>patrol_navigation</name>
+  <version>0.0.0</version>
+  <description>The patrol_navigation package</description>
 
-find_package(catkin REQUIRED COMPONENTS)
+  <maintainer email="support@agilex.ai">agiley</maintainer>
 
-catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES patrol_navigation
-#  CATKIN_DEPENDS gmapping map_server move_base
-#  DEPENDS system_lib
-)
+  <license>BSD</license>
 
-include_directories(
-# include
-  ${catkin_INCLUDE_DIRS}
-)
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>gmapping</exec_depend>
+  <exec_depend>map_server</exec_depend>
+  <exec_depend>move_base</exec_depend>
+  <exec_depend>nodelet</exec_depend>
+  <exec_depend>rtabmap_ros</exec_depend>
+  <exec_depend>amcl</exec_depend>
 
-if (CATKIN_ENABLE_TESTING)
-  find_package(roslaunch REQUIRED)
-  roslaunch_add_file_check(launch/patrol_navigation_amcl_diff.launch)
-  roslaunch_add_file_check(launch/patrol_gmapping.launch)
-  roslaunch_add_file_check(launch/patrol_move_base_diff.launch)
-  roslaunch_add_file_check(launch/patrol_navigation_rtabmap_diff.launch)
-  roslaunch_add_file_check(launch/patrol_rtabmap.launch)
-endif()
+
+  <test_depend>roslaunch</test_depend>
+</package>

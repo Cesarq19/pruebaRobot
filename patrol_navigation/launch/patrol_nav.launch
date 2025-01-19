@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find patrol_navigation)/launch/patrol_navigation_amcl_diff.launch"/>
+    <node pkg="rviz" type="rviz" required="true" args="-d $(find patrol_navigation)/rviz/patrol_navigation.rviz"/>
+</launch>
